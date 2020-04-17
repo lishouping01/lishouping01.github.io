@@ -16,7 +16,7 @@
 <meta property="og:description" content="方法 1     适合一维数组  多维数组去重  降维后去重 1234567 var  arr &#x3D; [1,2,3,4,5,6,6,7];  for(var i &#x3D; 0 ,newArr&#x3D;[];i&lt;arr.length;i++)&amp;#123;   if(newArr.indexOf(arr[i]) &#x3D;&#x3D;&#x3D; -1 )&amp;#123;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-16T13:22:57.000Z">
-<meta property="article:modified_time" content="2020-04-16T15:36:32.769Z">
+<meta property="article:modified_time" content="2020-04-17T14:14:40.738Z">
 <meta property="article:author" content="zss">
 <meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
@@ -66,6 +66,9 @@
 	        
 			</ul>
 		</nav>
+		<!-- <nav>
+			总文章数 2
+	 </nav> -->
 		<nav class="header-smart-menu">
     		
     			
@@ -152,7 +155,8 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-arr" class="article article-type-post " itemscope itemprop="blogPost">
+            
+<article id="post-arr" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -201,6 +205,15 @@
 <p>  选择排序<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  function f4(arr)&#123; &#x2F;&#x2F;选择排序</span><br><span class="line">    &#x2F;&#x2F;用这个数分别和别的数相比较，改变的是索引的位置，每轮结束后才交换为位置</span><br><span class="line">    for(var i&#x3D;0;i&lt;arr.length-1;i++)&#123;  &#x2F;&#x2F;控制外层比较的轮数</span><br><span class="line">        var minIndex&#x3D;i;  &#x2F;&#x2F;先假定一个最小值，定义变量minIndex指向该值的索引</span><br><span class="line">        for(var j&#x3D;i+1;j&lt;arr.length;j++)&#123;</span><br><span class="line">            if(arr[minIndex]&gt;arr[j])&#123;</span><br><span class="line">                minIndex&#x3D;j;  &#x2F;&#x2F;改变最小索引的指向</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        var temp&#x3D;arr[i];   &#x2F;&#x2F;每轮比较结束，将最初假定的最小值和实际最小值交换</span><br><span class="line">        arr[i]&#x3D;arr[minIndex];</span><br><span class="line">        arr[minIndex]&#x3D;temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;  &#x2F;&#x2F;将排序后的数组返回</span><br><span class="line">&#125;</span><br><span class="line">console.log(f4(arr3));</span><br></pre></td></tr></table></figure></p>
 
       
+
+      <!-- 增加版权声明 -->
+
+
+
+<div class="declare" hidden="hidden"></div>
+
+
+<!-- 增加版权声明结束 -->
 
       
         <div class="page-reward">
@@ -360,6 +373,7 @@
 
   
 
+
           </div>
         </div>
       </div>
@@ -386,6 +400,7 @@
 				本文总阅读量<span id="busuanzi_value_page_pv"></span>次
   
 </footer>
+<script type="text/javascript" src="/love.js"></script>
     </div>
     
 <script>
