@@ -99,6 +99,8 @@
 			
 				<li><a href="/archives/index.html" target="_blank">归档</a></li>
 			
+				<li><a href="/photo/" target="_blank">相册</a></li>
+			
 				<li><a href="http://boke.wayp.top/resume/index.html" target="_blank">动态简历</a></li>
 			
 			</ul>
@@ -166,6 +168,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -178,11 +182,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives/index.html">归档</a></li>
+					<li style="width: 25%"><a href="/archives/index.html">归档</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="http://boke.wayp.top/resume/index.html">动态简历</a></li>
+					<li style="width: 25%"><a href="/photo/">相册</a></li>
+		        
+					<li style="width: 25%"><a href="http://boke.wayp.top/resume/index.html">动态简历</a></li>
 		        
 				</ul>
 			</nav>
@@ -201,7 +207,7 @@
             
 
   
-    <article id="post-s" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-about" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -209,7 +215,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/04/14/s/" target="_blank">当这一切结束之后你最想见到谁?</a>
+	  <a class="article-title" href="/2020/04/14/about/" target="_blank">关于本博客</a>
   
     </h1>
   
@@ -217,7 +223,7 @@
 
   
   
-<a href="/2020/04/14/s/" class="archive-article-date">
+<a href="/2020/04/14/about/" class="archive-article-date">
         <time datetime="2020-04-14T08:08:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
 </a>
 
@@ -230,8 +236,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>当这一切结束之后你最想见到谁，<br>谁会让你的脸蛋红的像草莓，<br>无聊的你最想要谁来陪，<br>想着牵着谁的手去和谁买醉，<br>和谁抱在一起 和谁早早睡，<br>是否还会嫌他太啰嗦嫌ta多嘴，<br>继续成天无理取闹地和ta作对，<br>我真的好想你你是否听得见，<br>想摘掉口罩把你浑身上下亲个遍，<br>想和你去排人超多的网红奶茶店，<br>反正我干啥都行就想和你见一面，<br>等这一切结束我要带你去海边，<br>穿泳装晒着太阳坐在一起吃海鲜，<br>我靠在秋千上面而你靠着我的肩，<br>我们在一起浪费时间，<br>感受大自然带来的风，<br>很平常但是ta并不普通，<br>这短时间我也没浪费，</p>
-    
+    <p>暂无内容 后续添加</p>
+
     
 
     
@@ -247,12 +253,91 @@
     </div>
     
     
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/04/14/about/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-vue-cli3-port" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/04/23/vue-cli3-port/" target="_blank">使用vue-cli3脚手架工具更改运行的端口号</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/04/23/vue-cli3-port/" class="archive-article-date">
+        <time datetime="2020-04-23T01:18:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <blockquote>
+<p>在使用最新版的vue-cli脚手架工具时，安装好后发现项目的主目录下只有babel.config.js文件，并没有其他博主说的别的一些js文件，我想可能时在版本更新时进行了删减，好，话不多说。</p>
+</blockquote>
+<h5 id="第一步-在主目录下创建vue-config-js文件"><a href="#第一步-在主目录下创建vue-config-js文件" class="headerlink" title="第一步 在主目录下创建vue.config.js文件"></a>第一步 在主目录下创建vue.config.js文件</h5><h5 id="第二步-粘贴如下代码进入"><a href="#第二步-粘贴如下代码进入" class="headerlink" title="第二步 粘贴如下代码进入"></a>第二步 粘贴如下代码进入</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#39;use strict&#39;     &#x2F;&#x2F;启动严格模式</span><br><span class="line">module.exports &#x3D; &#123; </span><br><span class="line">    devServer: &#123;</span><br><span class="line">      port: 4000  &#x2F;&#x2F; 此处修改你想要的端口号，</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>这样问题就已经解决了。</p>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">碎碎念</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -262,7 +347,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2020/04/14/s/">展开全文 >></a>
+      <a class="article-more-a" href="/2020/04/23/vue-cli3-port/">展开全文 >></a>
     </p>
     
 
@@ -349,6 +434,92 @@
     
     <p class="article-more-link">
       <a class="article-more-a" href="/2020/04/16/arr/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ssn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2020/04/14/ssn/" target="_blank">当这一切结束之后你最想见到谁?</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2020/04/14/ssn/" class="archive-article-date">
+        <time datetime="2020-04-14T08:08:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>当这一切结束之后你最想见到谁，<br>谁会让你的脸蛋红的像草莓，<br>无聊的你最想要谁来陪，<br>想着牵着谁的手去和谁买醉，<br>和谁抱在一起 和谁早早睡，<br>是否还会嫌他太啰嗦嫌ta多嘴，<br>继续成天无理取闹地和ta作对，<br>我真的好想你你是否听得见，<br>想摘掉口罩把你浑身上下亲个遍，<br>想和你去排人超多的网红奶茶店，<br>反正我干啥都行就想和你见一面，<br>等这一切结束我要带你去海边，<br>穿泳装晒着太阳坐在一起吃海鲜，<br>我靠在秋千上面而你靠着我的肩，<br>我们在一起浪费时间，<br>感受大自然带来的风，<br>很平常但是ta并不普通，<br>这短时间我也没浪费，</p>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">碎碎念</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2020/04/14/ssn/">展开全文 >></a>
     </p>
     
 
@@ -512,6 +683,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">碎碎念</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
             
             <div class="clearfix"></div>
