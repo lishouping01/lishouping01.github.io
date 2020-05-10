@@ -6,22 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://boke.wayp.top">
-  <title>使用vue-cli3脚手架工具更改运行的端口号 | zss的博客</title>
+  <title>vue proxy代理 解决跨域 | zss的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="在使用最新版的vue-cli脚手架工具时，安装好后发现项目的主目录下只有babel.config.js文件，并没有其他博主说的别的一些js文件，我想可能时在版本更新时进行了删减，好，话不多说。   第一步 在主目录下创建vue.config.js文件  第二步 粘贴如下代码进入">
+  <meta name="description" content="上篇说到怎么把接口统一管理，但是自己写的接口 在本机测试 不存在跨域问题，当我放到实际项目中，便出现了跨域，如下图：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用vue-cli3脚手架工具更改运行的端口号">
-<meta property="og:url" content="http://boke.wayp.top/2020/04/23/vue-cli3-port/index.html">
+<meta property="og:title" content="vue proxy代理 解决跨域">
+<meta property="og:url" content="http://boke.wayp.top/posts/386910b7.html">
 <meta property="og:site_name" content="zss的博客">
-<meta property="og:description" content="在使用最新版的vue-cli脚手架工具时，安装好后发现项目的主目录下只有babel.config.js文件，并没有其他博主说的别的一些js文件，我想可能时在版本更新时进行了删减，好，话不多说。   第一步 在主目录下创建vue.config.js文件  第二步 粘贴如下代码进入">
+<meta property="og:description" content="上篇说到怎么把接口统一管理，但是自己写的接口 在本机测试 不存在跨域问题，当我放到实际项目中，便出现了跨域，如下图：">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-23T01:18:27.000Z">
-<meta property="article:modified_time" content="2020-04-23T01:38:04.652Z">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHOep9.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHXADP.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHbh7D.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHqvKx.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHqxr6.png">
+<meta property="article:published_time" content="2020-04-30T01:12:03.000Z">
+<meta property="article:modified_time" content="2020-05-10T14:13:01.960Z">
 <meta property="article:author" content="zss">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/30/JHOep9.png">
   
     <link rel="alternative" href="/atom.xml" title="zss的博客" type="application/atom+xml">
   
@@ -185,14 +191,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-vue-cli3-port" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue-proxy代理 解决跨域" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      使用vue-cli3脚手架工具更改运行的端口号
+      vue proxy代理 解决跨域
     </h1>
   
 
@@ -204,8 +210,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/04/23/vue-cli3-port/" class="archive-article-date">
-        <time datetime="2020-04-23T01:18:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-23</time>
+<a href="/posts/386910b7.html" class="archive-article-date">
+        <time datetime="2020-04-30T01:12:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
 </a>
 
   
@@ -218,7 +224,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">144字</span>
+      <span class="post-count">237字</span>
     </span>
   </span>
 
@@ -238,13 +244,20 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <blockquote>
-<p>在使用最新版的vue-cli脚手架工具时，安装好后发现项目的主目录下只有babel.config.js文件，并没有其他博主说的别的一些js文件，我想可能时在版本更新时进行了删减，好，话不多说。</p>
-</blockquote>
-<p> 第一步 在主目录下创建vue.config.js文件</p>
-<p> 第二步 粘贴如下代码进入<br> <a id="more"></a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#39;use strict&#39;     &#x2F;&#x2F;启动严格模式</span><br><span class="line">module.exports &#x3D; &#123; </span><br><span class="line">    devServer: &#123;</span><br><span class="line">      port: 4000  &#x2F;&#x2F; 此处修改你想要的端口号，</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>这样问题就已经解决了。</p>
+    <p>上篇说到怎么把接口统一管理，但是自己写的接口 在本机测试 不存在跨域问题，当我放到实际项目中，便出现了跨域，如下图：</p>
+<p><img src="https://s1.ax1x.com/2020/04/30/JHOep9.png" alt=""></p>
+<a id="more"></a>
+
+<p>便想到之前在某文章看到vue是可以解决跨域问题的 ，叫 <span style="color:red">proxy代理</span>,便去官网查看配置详情.</p>
+<p>proxy代理配置：<a href="https://cli.vuejs.org/zh/config/#devserver-proxy" target="_blank" rel="noopener">https://cli.vuejs.org/zh/config/#devserver-proxy</a></p>
+<p><img src="https://s1.ax1x.com/2020/04/30/JHXADP.png" alt=""></p>
+<p>步奏:</p>
+<h6 id="1-在项目根目录创建vue-config-js文件-里面配置proxy代理"><a href="#1-在项目根目录创建vue-config-js文件-里面配置proxy代理" class="headerlink" title="1.在项目根目录创建vue.config.js文件,里面配置proxy代理"></a>1.在项目根目录创建vue.config.js文件,里面配置proxy代理</h6><p><img src="https://s1.ax1x.com/2020/04/30/JHbh7D.png" alt=""></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    devServer: &#123;</span><br><span class="line">      port: <span class="number">4000</span>  ,<span class="comment">// 此处修改你想要的端口号，</span></span><br><span class="line">      open: <span class="literal">true</span>, <span class="comment">//加载成功自动打开网页</span></span><br><span class="line">      proxy:&#123;</span><br><span class="line">        <span class="string">'/interface'</span>: &#123;</span><br><span class="line">          target: <span class="string">'http://192.0.0.1'</span>, <span class="comment">// 设置你调用的接口域名和端口号</span></span><br><span class="line">          ws: <span class="literal">true</span>, <span class="comment">//// 是否启用websockets</span></span><br><span class="line">          changeOrigin: <span class="literal">true</span>,     <span class="comment">// 跨域</span></span><br><span class="line">          pathRewrite: &#123;</span><br><span class="line">            <span class="string">'^/interface'</span>:<span class="string">''</span>          </span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h6 id="2-修改二次封装的axios"><a href="#2-修改二次封装的axios" class="headerlink" title="2.修改二次封装的axios"></a>2.修改二次封装的axios</h6><p><img src="https://s1.ax1x.com/2020/04/30/JHqvKx.png" alt=""></p>
+<p>baseURL一定要注释或者删除,否则不会被代理还是会出现跨域问题.</p>
+<h6 id="3-修改api接口"><a href="#3-修改api接口" class="headerlink" title="3.修改api接口"></a>3.修改api接口</h6><p><img src="https://s1.ax1x.com/2020/04/30/JHqxr6.png" alt=""></p>
 
     
 
@@ -282,6 +295,26 @@
     </div>
     
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          zss
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://boke.wayp.top/posts/386910b7.html" title="vue proxy代理 解决跨域" target="_blank">http://boke.wayp.top/posts/386910b7.html</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -349,7 +382,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://boke.wayp.top/2020/04/23/vue-cli3-port/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://boke.wayp.top/posts/386910b7.html" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -364,18 +397,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/04/29/vue-api/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/21e1c4f6.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          vue api接口封装统一管理
+          使用vue-video-player插件怎么动态获取视频链接
         
       </div>
     </a>
   
   
-    <a href="/2020/04/16/arr/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数组去重</div>
+    <a href="/posts/2560e5cb.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue api接口封装统一管理</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -402,7 +435,7 @@
 
 
 
-<div id="SOHUCS" sid="vue-cli3-port" ></div> 
+<div id="SOHUCS" sid="vue-proxy代理 解决跨域" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -547,7 +580,7 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
+                <a href="javascript:void(0)" class="js-tag color4">碎碎念</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,7 +588,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">碎碎念</a>
+                <a href="javascript:void(0)" class="js-tag color1">javascript</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,39 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://boke.wayp.top">
-  <title>Tag: javascript | zss的博客</title>
+  <title>vue api接口封装统一管理 | zss的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zss的博客">
-<meta property="og:url" content="http://boke.wayp.top/tags/javascript/index.html">
+  <meta name="description" content="在vue开发中，会涉及到很多的接口处理，如果在每个页面用axios单独写接口，无疑不便于管理，修改起来也很麻烦，这就要统一封装管理接口数据。 首先，在src目录下先建一个文件夹，里面建个文件叫require.js文件用来二次封装axios请求">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue api接口封装统一管理">
+<meta property="og:url" content="http://boke.wayp.top/posts/2560e5cb.html">
 <meta property="og:site_name" content="zss的博客">
-<meta property="og:description" content="博客">
+<meta property="og:description" content="在vue开发中，会涉及到很多的接口处理，如果在每个页面用axios单独写接口，无疑不便于管理，修改起来也很麻烦，这就要统一封装管理接口数据。 首先，在src目录下先建一个文件夹，里面建个文件叫require.js文件用来二次封装axios请求">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/29/JTPr6J.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/29/JTPBpF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/29/JTPDl4.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/04/29/JTPNT0.gif">
+<meta property="article:published_time" content="2020-04-29T04:50:04.000Z">
+<meta property="article:modified_time" content="2020-05-10T13:59:38.367Z">
 <meta property="article:author" content="zss">
-<meta property="article:tag" content="前端">
-<meta property="article:tag" content="js">
-<meta property="article:tag" content="jquery">
-<meta property="article:tag" content="javascript">
-<meta property="article:tag" content="html5">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Developer">
-<meta property="article:tag" content="Programmer">
-<meta property="article:tag" content="Coder">
-<meta property="article:tag" content="Geek">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="css3">
-<meta property="article:tag" content="用户体验">
+<meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/29/JTPr6J.png">
   
     <link rel="alternative" href="/atom.xml" title="zss的博客" type="application/atom+xml">
   
@@ -202,65 +190,256 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue-api接口封装统一管理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/posts/908d091d.html" class="archive-article-date">
-        <time datetime="2020-04-16T13:22:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-16</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/posts/908d091d.html" target="_blank">数组去重</a>
   
+    <h1 class="article-title" itemprop="name">
+      vue api接口封装统一管理
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/posts/2560e5cb.html" class="archive-article-date">
+        <time datetime="2020-04-29T04:50:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">221字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>在vue开发中，会涉及到很多的接口处理，如果在每个页面用axios单独写接口，无疑不便于管理，修改起来也很麻烦，这就要统一封装管理接口数据。</p>
+<p>首先，在src目录下先建一个文件夹，里面建个文件叫require.js文件用来二次封装axios请求</p>
+<a id="more"></a>
+
+<p>配置简要说明一下：</p>
+<ul>
+<li>引入axios,新建了个axios的实例(axios的实例的axios的功能一样)</li>
+<li>请求拦截器响应拦截器不是本文重点，略过</li>
+<li>第26行代码及以后是重点</li>
+</ul>
+<p><img src="https://s1.ax1x.com/2020/04/29/JTPr6J.png" alt=""></p>
+<p>在src目录下再建个api目录  api.js文件 用来封装api接口 </p>
+<p><img src="https://s1.ax1x.com/2020/04/29/JTPBpF.png" alt=""></p>
+<p>在组件使用接口</p>
+<p><img src="https://s1.ax1x.com/2020/04/29/JTPDl4.png" alt=""></p>
+<p>效果图：</p>
+<p><img src="https://s1.ax1x.com/2020/04/29/JTPNT0.gif" alt=""></p>
+<blockquote>
+<p>本文参考文章：</p>
+<p>vue项目接口管理：<a href="https://segmentfault.com/a/1190000017925880" target="_blank" rel="noopener">https://segmentfault.com/a/1190000017925880</a></p>
+<p>axios中文文档：<a href="https://www.jianshu.com/p/7a9fbcbb1114" target="_blank" rel="noopener">https://www.jianshu.com/p/7a9fbcbb1114</a></p>
+<p>后续会在这基础上做些改动。</p>
+</blockquote>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://s1.ax1x.com/2020/04/14/JSnw1s.png">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="https://s1.ax1x.com/2020/04/14/JSnUhQ.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://boke.wayp.top/posts/2560e5cb.html" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+    <a href="/posts/386910b7.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue proxy代理 解决跨域
+        
+      </div>
+    </a>
+  
+  
+    <a href="/posts/d1e481f1.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用vue-cli3脚手架工具更改运行的端口号</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+<div id="SOHUCS" sid="vue-api接口封装统一管理" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cyuMO68js",
+        conf: "bf6b86ee071f72ac8c4b5615d64777a9"
+    });
+</script>
+</script>
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -301,9 +480,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
