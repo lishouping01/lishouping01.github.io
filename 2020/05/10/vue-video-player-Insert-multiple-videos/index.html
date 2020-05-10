@@ -6,28 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://boke.wayp.top">
-  <title>vue proxy代理 解决跨域 | zss的博客</title>
+  <title>使用vue-video-player插件怎么动态获取视频链接 | zss的博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="上篇说到怎么把接口统一管理，但是自己写的接口 在本机测试 不存在跨域问题，当我放到实际项目中，便出现了跨域，如下图：">
+  <meta name="description" content="如何获取多个视频url? 因为是从后台获取不同视频数据，要更改playerOptions里面的url，所以一个playerOptions对象没法解决  解决方法： 1. 把playerOptions对象变成空数组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue proxy代理 解决跨域">
-<meta property="og:url" content="http://boke.wayp.top/2020/04/30/proxy/index.html">
+<meta property="og:title" content="使用vue-video-player插件怎么动态获取视频链接">
+<meta property="og:url" content="http://boke.wayp.top/2020/05/10/vue-video-player-Insert-multiple-videos/index.html">
 <meta property="og:site_name" content="zss的博客">
-<meta property="og:description" content="上篇说到怎么把接口统一管理，但是自己写的接口 在本机测试 不存在跨域问题，当我放到实际项目中，便出现了跨域，如下图：">
+<meta property="og:description" content="如何获取多个视频url? 因为是从后台获取不同视频数据，要更改playerOptions里面的url，所以一个playerOptions对象没法解决  解决方法： 1. 把playerOptions对象变成空数组">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHOep9.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHXADP.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHbh7D.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHqvKx.png">
-<meta property="og:image" content="https://s1.ax1x.com/2020/04/30/JHqxr6.png">
-<meta property="article:published_time" content="2020-04-30T01:12:03.000Z">
-<meta property="article:modified_time" content="2020-04-30T01:50:52.547Z">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/10/Y3LCY8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/10/Y3Lv3F.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/05/10/Y3O8C8.png">
+<meta property="article:published_time" content="2020-05-10T09:48:58.000Z">
+<meta property="article:modified_time" content="2020-05-10T10:28:55.928Z">
 <meta property="article:author" content="zss">
 <meta property="article:tag" content="vue">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/04/30/JHOep9.png">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/05/10/Y3LCY8.png">
   
     <link rel="alternative" href="/atom.xml" title="zss的博客" type="application/atom+xml">
   
@@ -191,14 +189,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-proxy" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-vue-video-player-Insert-multiple-videos" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      vue proxy代理 解决跨域
+      使用vue-video-player插件怎么动态获取视频链接
     </h1>
   
 
@@ -210,8 +208,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/04/30/proxy/" class="archive-article-date">
-        <time datetime="2020-04-30T01:12:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
+<a href="/2020/05/10/vue-video-player-Insert-multiple-videos/" class="archive-article-date">
+        <time datetime="2020-05-10T09:48:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
 </a>
 
   
@@ -224,7 +222,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">262字</span>
+      <span class="post-count">626字</span>
     </span>
   </span>
 
@@ -233,7 +231,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -244,20 +242,27 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>上篇说到怎么把接口统一管理，但是自己写的接口 在本机测试 不存在跨域问题，当我放到实际项目中，便出现了跨域，如下图：</p>
-<p><img src="https://s1.ax1x.com/2020/04/30/JHOep9.png" alt=""></p>
+    <h5 id="如何获取多个视频url"><a href="#如何获取多个视频url" class="headerlink" title="如何获取多个视频url?"></a>如何获取多个视频url?</h5><blockquote>
+<p>因为是从后台获取不同视频数据，要更改playerOptions里面的url，所以一个playerOptions对象没法解决</p>
+</blockquote>
+<p><strong>解决方法：</strong></p>
+<p><strong>1. 把playerOptions对象变成空数组</strong></p>
 <a id="more"></a>
 
-<p>便想到之前在某文章看到vue是可以解决跨域问题的 ，叫 <span style="color:red">proxy代理</span>,便去官网查看配置详情.</p>
-<p>proxy代理配置：<a href="https://cli.vuejs.org/zh/config/#devserver-proxy" target="_blank" rel="noopener">https://cli.vuejs.org/zh/config/#devserver-proxy</a></p>
-<p><img src="https://s1.ax1x.com/2020/04/30/JHXADP.png" alt=""></p>
-<p>步奏:</p>
-<h6 id="1-在项目根目录创建vue-config-js文件-里面配置proxy代理"><a href="#1-在项目根目录创建vue-config-js文件-里面配置proxy代理" class="headerlink" title="1.在项目根目录创建vue.config.js文件,里面配置proxy代理"></a>1.在项目根目录创建vue.config.js文件,里面配置proxy代理</h6><p><img src="https://s1.ax1x.com/2020/04/30/JHbh7D.png" alt=""></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    devServer: &#123;</span><br><span class="line">      port: 4000  ,&#x2F;&#x2F; 此处修改你想要的端口号，</span><br><span class="line">      open: true, &#x2F;&#x2F;加载成功自动打开网页</span><br><span class="line">      proxy:&#123;</span><br><span class="line">        &#39;&#x2F;interface&#39;: &#123;</span><br><span class="line">          target: &#39;http:&#x2F;&#x2F;192.0.0.1&#39;, &#x2F;&#x2F; 设置你调用的接口域名和端口号</span><br><span class="line">          ws: true, &#x2F;&#x2F;&#x2F;&#x2F; 是否启用websockets</span><br><span class="line">          changeOrigin: true,     &#x2F;&#x2F; 跨域</span><br><span class="line">          pathRewrite: &#123;</span><br><span class="line">            &#39;^&#x2F;interface&#39;:&#39;&#39;          </span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">      videos:[],<span class="comment">//视频列表</span></span><br><span class="line">      playerOptions: [], <span class="comment">// 视频播放</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
 
-<h6 id="2-修改二次封装的axios"><a href="#2-修改二次封装的axios" class="headerlink" title="2.修改二次封装的axios"></a>2.修改二次封装的axios</h6><p><img src="https://s1.ax1x.com/2020/04/30/JHqvKx.png" alt=""></p>
-<p>baseURL一定要注释或者删除,否则不会被代理还是会出现跨域问题.</p>
-<h6 id="3-修改api接口"><a href="#3-修改api接口" class="headerlink" title="3.修改api接口"></a>3.修改api接口</h6><p><img src="https://s1.ax1x.com/2020/04/30/JHqxr6.png" alt=""></p>
+<p><strong>2. 从后台获取到的数据放在videolist数组里，如下</strong></p>
+<p><img src="https://s1.ax1x.com/2020/05/10/Y3LCY8.png" alt=""></p>
+<p><strong>3. 循环遍历videolist数组，并定义一个arrs来保存视频播放参数,并添加到playerOptions数组里面</strong></p>
+<p><img src="https://s1.ax1x.com/2020/05/10/Y3Lv3F.png" alt=""></p>
+<p><strong>4. v-for循环遍历数组，把index索引值也传出来，在video-player标签里要用</strong></p>
+<p><img src="https://s1.ax1x.com/2020/05/10/Y3O8C8.png" alt=""></p>
+<p>代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">    &lt;!-- 视频播放-组件- --&gt;</span><br><span class="line">     　&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"video video-flex"</span>&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"video-item"</span> v-<span class="keyword">for</span>=<span class="string">"(item,index) in videos"</span> :key=<span class="string">"index"</span>&gt;</span><br><span class="line">          &lt;video-player</span><br><span class="line">          ref=<span class="string">"videoPlayer"</span></span><br><span class="line">          <span class="class"><span class="keyword">class</span></span>=<span class="string">"video-player vjs-custom-skin widtheight"</span></span><br><span class="line">          :playsinline=<span class="string">"true"</span></span><br><span class="line">          :options=<span class="string">"playerOptions[index]"</span></span><br><span class="line">          /&gt;</span><br><span class="line">          &lt;a :href=<span class="string">"item.goto_src"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"video-title"</span>&gt;&#123;&#123;item.title&#125;&#125;&lt;<span class="regexp">/a&gt;</span></span><br><span class="line"><span class="regexp">          &lt;p class="video-title-tip"&gt;&#123;&#123;item.info&#125;&#125;&lt;/</span>p&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">     &lt;/</span>div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!--JS 代码--&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">      videos:[],<span class="comment">//视频列表</span></span><br><span class="line">      playerOptions: [], <span class="comment">// 视频播放</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods:&#123;</span><br><span class="line">    <span class="comment">// 初始化获取数据</span></span><br><span class="line">     init()&#123;</span><br><span class="line">        video().then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">       <span class="keyword">this</span>.videos=res.data</span><br><span class="line">       <span class="built_in">console</span>.log(res.data)</span><br><span class="line">      <span class="comment">// 动态添加url地址</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.videos.length; i++) &#123;</span><br><span class="line">            <span class="keyword">let</span> arrs = &#123;</span><br><span class="line">              playbackRates: [<span class="number">1.0</span>, <span class="number">1.5</span>, <span class="number">2.0</span>,<span class="number">2.5</span>,<span class="number">3.0</span>], <span class="comment">//播放速度</span></span><br><span class="line">              autoplay: <span class="literal">false</span>, <span class="comment">//如果true,浏览器准备好时开始回放。</span></span><br><span class="line">              muted: <span class="literal">false</span>, <span class="comment">// 默认情况下将会消除任何音频。</span></span><br><span class="line">              loop: <span class="literal">false</span>, <span class="comment">// 导致视频一结束就重新开始。</span></span><br><span class="line">              preload: <span class="string">"auto"</span>, <span class="comment">// 建议浏览器在&lt;video&gt;加载元素后是否应该开始下载视频数据。auto浏览器选择最佳行为,立即开始加载视频（如果浏览器支持）</span></span><br><span class="line">              language: <span class="string">"zh-CN"</span>,</span><br><span class="line">              aspectRatio: <span class="string">"16:9"</span>, <span class="comment">// 将播放器置于流畅模式，并在计算播放器的动态大小时使用该值。值应该代表一个比例 - 用冒号分隔的两个数字（例如"16:9"或"4:3"）</span></span><br><span class="line">              fluid: <span class="literal">true</span>, <span class="comment">// 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。</span></span><br><span class="line">              sources: [</span><br><span class="line">                &#123;</span><br><span class="line">                  type: <span class="string">"video/mp4"</span>,</span><br><span class="line">                  src:<span class="keyword">this</span>.videos[i].video_src<span class="comment">//url地址</span></span><br><span class="line">                &#125;</span><br><span class="line">              ],</span><br><span class="line">              poster: <span class="string">""</span>, <span class="comment">//封面地址</span></span><br><span class="line">              notSupportedMessage: <span class="string">"此视频暂无法播放，请稍后再试"</span>, <span class="comment">//允许覆盖Video.js无法播放媒体源时显示的默认信息。</span></span><br><span class="line">              controlBar: &#123;</span><br><span class="line">                timeDivider: <span class="literal">true</span>,</span><br><span class="line">                durationDisplay: <span class="literal">true</span>,</span><br><span class="line">                remainingTimeDisplay: <span class="literal">false</span>,</span><br><span class="line">                fullscreenToggle: <span class="literal">true</span> <span class="comment">//全屏按钮</span></span><br><span class="line">              &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="keyword">this</span>.playerOptions.push(arrs);</span><br><span class="line">         &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">   computed: &#123;</span><br><span class="line">    player() &#123;</span><br><span class="line">      <span class="comment">//自定义播放</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.$refs.videoPlayer.player;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>参考文章：<a href="https://my.oschina.net/u/4143235/blog/3207063/print" target="_blank" rel="noopener">https://my.oschina.net/u/4143235/blog/3207063/print</a></p>
+</blockquote>
 
     
 
@@ -295,26 +300,6 @@
     </div>
     
 
-    
-    <div class="declare"> 
-      <ul class="post-copyright">
-        <li>
-          <strong>本文作者：</strong>
-          zss
-        </li>
-        <li>
-          <strong>本文链接：</strong>
-          <a href="http://boke.wayp.top/2020/04/30/proxy/" title="vue proxy代理 解决跨域" target="_blank">http://boke.wayp.top/2020/04/30/proxy/</a>
-        </li>
-        
-        <li>
-          <strong>版权声明： </strong>
-          
-          本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow" target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
-        </li>
-        
-      </ul>
-    </div>
     
 
   </div>
@@ -382,7 +367,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://boke.wayp.top/2020/04/30/proxy/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://boke.wayp.top/2020/05/10/vue-video-player-Insert-multiple-videos/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -397,18 +382,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/05/10/vue-video-player-Insert-multiple-videos/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          使用vue-video-player插件怎么动态获取视频链接
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/29/vue-api/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue api接口封装统一管理</div>
+    <a href="/2020/04/30/proxy/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue proxy代理 解决跨域</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -435,7 +411,7 @@
 
 
 
-<div id="SOHUCS" sid="proxy" ></div> 
+<div id="SOHUCS" sid="vue-video-player-Insert-multiple-videos" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
