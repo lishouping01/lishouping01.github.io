@@ -414,17 +414,31 @@
 
 
 
-<div id="SOHUCS" sid="ssn" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "cyuMO68js",
-        conf: "bf6b86ee071f72ac8c4b5615d64777a9"
-    });
-</script>
-</script>
 
 
+
+
+
+  <div id="giteement-ctn"></div>
+  
+    <link rel="stylesheet" href="/lib/default.css">
+    <script src="/lib/giteement.browser.js"></script>
+  
+  <script>
+  <!-- id: "当这一切结束之后你最想见到谁?" -->
+  var giteement = new Giteement({
+    id: '20200415160800',
+    owner: '小石头',
+    repo: 'yilia-plus-demo',
+    backcall_uri: 'http://boke.wayp.top/',
+    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
+    oauth: {
+      client_id: '3a66b828ac8c040699a80877012f5a1f8a94e671a579ff425a167f26516a2ed7',
+      client_secret: '628a6e41d10eb44bd39ed8158ac0cae24c7cb8a47523b668d434a3569eba92a3'
+    },
+  })
+  giteement.render('giteement-ctn')
+  </script>
 
 
 
